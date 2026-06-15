@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zimmer anfragen – Gästehaus Am Hafen Meersburg</title>
+  <meta name="description" content="Unverbindliche Buchungsanfrage für das Gästehaus Am Hafen in Meersburg. Zimmer ab 90 €/Nacht. Kostenfreie Stornierung bis 14 Tage vor Anreise.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Am <span>Hafen</span></a>
+    <div class="nav__links" role="list">
+      <a href="index.html" class="nav__link" role="listitem">Willkommen</a>
+      <a href="zimmer.html" class="nav__link" role="listitem">Zimmer</a>
+      <a href="hafenschaenke.html" class="nav__link" role="listitem">Hafenschänke</a>
+      <a href="kontakt.html" class="nav__link" role="listitem">Kontakt</a>
+      <a href="buchen.html" class="nav__cta nav__link nav__link--active" role="listitem">Jetzt anfragen</a>
+    </div>
+    <button class="nav__hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="nav__mobile" id="mobile-nav" aria-label="Mobile Navigation">
+  <a href="index.html" class="nav__link">Willkommen</a>
+  <a href="zimmer.html" class="nav__link">Zimmer</a>
+  <a href="hafenschaenke.html" class="nav__link">Hafenschänke</a>
+  <a href="kontakt.html" class="nav__link">Kontakt</a>
+  <a href="buchen.html" class="nav__cta">Jetzt anfragen</a>
+</nav>
+
+<!-- ── Page Header ─────────────────────────────────────────── -->
+<header class="page-header">
+  <div class="page-header__bg">
+    <img width="1600" height="961" src="meersburg-bodensee-uferpromenade-bearbeitet.jpg" srcset="meersburg-bodensee-uferpromenade-bearbeitet-768.jpg 768w, meersburg-bodensee-uferpromenade-bearbeitet-1200.jpg 1200w, meersburg-bodensee-uferpromenade-bearbeitet.jpg 1600w" sizes="100vw" alt="Uferpromenade am Bodensee bei Meersburg" loading="eager" fetchpriority="high">
+    <div class="page-header__content">
+      <p class="eyebrow">Buchungsanfrage</p>
+      <h1>Ihr Aufenthalt<br><em>am Hafen</em></h1>
+      <p class="page-header__sub">Senden Sie uns Ihre unverbindliche Anfrage — wir melden uns schnellstmöglich bei Ihnen.</p>
+    </div>
+  </div>
+</header>
+
+<!-- ── Booking Section ────────────────────────────────────── -->
+<main class="booking-section">
+  <div class="container">
+
+    <div class="booking-grid">
+
+      <!-- ── Form ──────────────────────────────────────────── -->
+      <div class="reveal">
+        <form class="booking-form" name="buchungsanfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/danke.html" aria-labelledby="form-heading">
+          <input type="hidden" name="form-name" value="buchungsanfrage">
+          <p hidden aria-hidden="true"><label>Bitte nicht ausfüllen: <input name="bot-field"></label></p>
+          <h2 id="form-heading" style="font-size: var(--text-2xl); margin-bottom: var(--s2);">Anfrage senden</h2>
+          <p class="lead" style="font-size: var(--text-sm); font-family: var(--font-body); font-style: normal; color: var(--text-soft); margin-bottom: var(--s8);">
+            Unverbindliche Anfrage — wir melden uns schnellstmöglich per E-Mail bei Ihnen.
+          </p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vorname">Vorname *</label>
+              <input type="text" id="vorname" name="vorname" required autocomplete="given-name" placeholder="Ihr Vorname">
+            </div>
+            <div class="form-group">
+              <label for="nachname">Nachname *</label>
+              <input type="text" id="nachname" name="nachname" required autocomplete="family-name" placeholder="Ihr Nachname">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-Mail-Adresse *</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="ihre@email.de">
+          </div>
+
+          <div class="form-group">
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="Optional — für Rückfragen">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="anreise">Anreise *</label>
+              <input type="date" id="anreise" name="anreise" required>
+            </div>
+            <div class="form-group">
+              <label for="abreise">Abreise *</label>
+              <input type="date" id="abreise" name="abreise" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="zimmer">Gewünschtes Zimmer *</label>
+            <select id="zimmer" name="zimmer" required>
+              <option value="" disabled selected>Bitte wählen…</option>
+              <option value="ez">Einzelzimmer (ab 90 €/Nacht)</option>
+              <option value="dz-klein">Kleines Doppelzimmer (ab 120 €/Nacht)</option>
+              <option value="dz-gaestehaus">Doppelzimmer Gästehaus (ab 130 €/Nacht)</option>
+              <option value="dz-fachwerkhaus">Doppelzimmer Fachwerkhaus (ab 140 €/Nacht)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="personen">Anzahl Personen *</label>
+            <select id="personen" name="personen" required>
+              <option value="" disabled selected>Bitte wählen…</option>
+              <option value="1">1 Person</option>
+              <option value="2">2 Personen</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nachricht">Nachricht / Besondere Wünsche</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Haben Sie besondere Wünsche oder Fragen? Wir freuen uns auf Ihre Nachricht."></textarea>
+          </div>
+
+          <div class="form-group" style="flex-direction: row; align-items: flex-start; gap: var(--s3);">
+            <input type="checkbox" id="datenschutz" name="datenschutz" required style="width: auto; flex-shrink: 0; margin-top: 3px;">
+            <label for="datenschutz" style="font-weight: 400; font-size: var(--text-sm); color: var(--text-mid); cursor: pointer;">
+              Ich habe die <a href="impressum.html#datenschutz" style="color: var(--lake); text-decoration: underline;">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage. *
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg" style="width: 100%; justify-content: center;">
+            Anfrage absenden
+          </button>
+
+          <p class="form-note" style="margin-top: var(--s4);">
+            * Pflichtfelder. Ihre Anfrage wird sicher an das Gästehaus übermittelt; wir melden uns per E-Mail bei Ihnen. Es entsteht keine Buchungsverpflichtung — erst mit schriftlicher Bestätigung gilt eine Reservierung als verbindlich.
+          </p>
+        </form>
+      </div>
+
+      <!-- ── Sidebar ─────────────────────────────────────── -->
+      <aside class="booking-sidebar reveal reveal-delay-1" aria-label="Buchungsinformationen">
+
+        <div class="booking-info-card">
+          <h3>Preisübersicht</h3>
+          <table class="price-table" aria-label="Zimmerpreise">
+            <tbody>
+              <tr>
+                <td>Einzelzimmer</td>
+                <td>ab 90 €</td>
+              </tr>
+              <tr>
+                <td>Kleines Doppelzimmer</td>
+                <td>ab 120 €</td>
+              </tr>
+              <tr>
+                <td>DZ Gästehaus</td>
+                <td>ab 130 €</td>
+              </tr>
+              <tr>
+                <td>DZ Fachwerkhaus</td>
+                <td>ab 140 €</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size: var(--text-xs); color: var(--text-soft); margin-top: var(--s4);">
+            Alle Preise sind Endpreise und schließen die gesetzliche MwSt. sowie alle Nebenkosten ein.
+          </p>
+        </div>
+
+        <div class="storno-block" id="stornierung" aria-label="Stornierungsbedingungen">
+          <h4>Stornierungsbedingungen</h4>
+          <div class="storno-item">
+            <span>Bis 14 Tage vor Anreise</span>
+            <strong style="color: oklch(42% 0.14 155);">Kostenfrei</strong>
+          </div>
+          <div class="storno-item">
+            <span>Ab 14 Tage vor Anreise</span>
+            <strong>90 % des Preises</strong>
+          </div>
+          <div class="storno-item">
+            <span>Nichtanreise am Anreisetag</span>
+            <strong>100 % des Preises</strong>
+          </div>
+          <p style="font-size: var(--text-xs); color: var(--text-mid); margin-top: var(--s4); line-height: 1.5;">
+            Wir empfehlen den Abschluss einer Reiserücktrittskostenversicherung.
+          </p>
+        </div>
+
+        <div class="booking-info-card" style="margin-top: var(--s4);">
+          <h3 style="font-size: var(--text-lg); margin-bottom: var(--s4);">Lieber direkt?</h3>
+          <p style="font-size: var(--text-sm); color: var(--text-mid); margin-bottom: var(--s4); line-height: 1.6;">
+            Sie erreichen uns auch direkt per Telefon oder E-Mail:
+          </p>
+          <a href="tel:+4975327069" class="btn btn--ghost" style="width: 100%; justify-content: center; margin-bottom: var(--s3);">
+            📞 07532 / 7069
+          </a>
+          <a href="mailto:amhafen@freenet.de" class="btn btn--ghost" style="width: 100%; justify-content: center;">
+            ✉ amhafen@freenet.de
+          </a>
+          <p style="font-size: var(--text-xs); color: var(--text-soft); margin-top: var(--s4);">Saison: April bis Ende September</p>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">Am <span>Hafen</span></div>
+        <p class="footer__desc">Historisches Gästehaus in der Altstadt von Meersburg am Bodensee. Familie Jakopic/Lehmann heißt Sie willkommen — Saison April bis September.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navigation</h4>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Willkommen</a></li>
+          <li><a href="zimmer.html" class="footer__link">Zimmer</a></li>
+          <li><a href="hafenschaenke.html" class="footer__link">Hafenschänke</a></li>
+          <li><a href="buchen.html" class="footer__link">Buchen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Kontakt</h4>
+        <ul class="footer__links">
+          <li><a href="kontakt.html" class="footer__link">Anfahrt</a></li>
+          <li><a href="tel:+4975327069" class="footer__link">07532 / 7069</a></li>
+          <li><a href="mailto:amhafen@freenet.de" class="footer__link">amhafen@freenet.de</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Rechtliches</h4>
+        <ul class="footer__links">
+          <li><a href="impressum.html" class="footer__link">Impressum</a></li>
+          <li><a href="impressum.html#datenschutz" class="footer__link">Datenschutz</a></li>
+          <li><a href="impressum.html#stornierung" class="footer__link">Stornierung</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2025 Gästehaus Am Hafen · Olaf Jakopic · Meersburg am Bodensee</span>
+      <div class="footer__legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="impressum.html#datenschutz">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
