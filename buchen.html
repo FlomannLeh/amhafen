@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zimmer anfragen – Gästehaus Am Hafen Meersburg</title>
   <meta name="description" content="Unverbindliche Buchungsanfrage für das Gästehaus Am Hafen in Meersburg. Zimmer ab 90 €/Nacht. Kostenfreie Stornierung bis 14 Tage vor Anreise.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -37,11 +37,11 @@
 <!-- ── Page Header ─────────────────────────────────────────── -->
 <header class="page-header">
   <div class="page-header__bg">
-    <img width="1600" height="961" src="meersburg-bodensee-uferpromenade-bearbeitet.jpg" srcset="meersburg-bodensee-uferpromenade-bearbeitet-768.jpg 768w, meersburg-bodensee-uferpromenade-bearbeitet-1200.jpg 1200w, meersburg-bodensee-uferpromenade-bearbeitet.jpg 1600w" sizes="100vw" alt="Uferpromenade am Bodensee bei Meersburg" loading="eager" fetchpriority="high">
+    <img width="1600" height="961" src="images/meersburg-bodensee-uferpromenade-bearbeitet.jpg" srcset="images/meersburg-bodensee-uferpromenade-bearbeitet-768.jpg 768w, images/meersburg-bodensee-uferpromenade-bearbeitet-1200.jpg 1200w, images/meersburg-bodensee-uferpromenade-bearbeitet.jpg 1600w" sizes="100vw" alt="Uferpromenade am Bodensee bei Meersburg" loading="eager" fetchpriority="high">
     <div class="page-header__content">
       <p class="eyebrow">Buchungsanfrage</p>
       <h1>Ihr Aufenthalt<br><em>am Hafen</em></h1>
-      <p class="page-header__sub">Senden Sie uns Ihre unverbindliche Anfrage — wir melden uns schnellstmöglich bei Ihnen.</p>
+      <p class="page-header__sub">Senden Sie uns Ihre unverbindliche Anfrage, wir melden uns schnellstmöglich bei Ihnen.</p>
     </div>
   </div>
 </header>
@@ -54,12 +54,16 @@
 
       <!-- ── Form ──────────────────────────────────────────── -->
       <div class="reveal">
-        <form class="booking-form" name="buchungsanfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/danke.html" aria-labelledby="form-heading">
-          <input type="hidden" name="form-name" value="buchungsanfrage">
-          <p hidden aria-hidden="true"><label>Bitte nicht ausfüllen: <input name="bot-field"></label></p>
+        <form class="booking-form" name="buchungsanfrage" method="POST" action="https://api.web3forms.com/submit" accept-charset="UTF-8" aria-labelledby="form-heading">
+          <!-- Web3Forms: kostenlosen Access-Key auf https://web3forms.com mit amhafen@freenet.de holen und unten einsetzen -->
+          <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="Neue Buchungsanfrage – Gästehaus Am Hafen">
+          <input type="hidden" name="from_name" value="Website Gästehaus Am Hafen">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
           <h2 id="form-heading" style="font-size: var(--text-2xl); margin-bottom: var(--s2);">Anfrage senden</h2>
           <p class="lead" style="font-size: var(--text-sm); font-family: var(--font-body); font-style: normal; color: var(--text-soft); margin-bottom: var(--s8);">
-            Unverbindliche Anfrage — wir melden uns schnellstmöglich per E-Mail bei Ihnen.
+            Unverbindliche Anfrage, wir melden uns schnellstmöglich per E-Mail bei Ihnen.
           </p>
 
           <div class="form-row">
@@ -80,7 +84,7 @@
 
           <div class="form-group">
             <label for="telefon">Telefon</label>
-            <input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="Optional — für Rückfragen">
+            <input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="Optional, für Rückfragen">
           </div>
 
           <div class="form-row">
@@ -99,9 +103,9 @@
             <select id="zimmer" name="zimmer" required>
               <option value="" disabled selected>Bitte wählen…</option>
               <option value="ez">Einzelzimmer (ab 90 €/Nacht)</option>
-              <option value="dz-klein">Kleines Doppelzimmer (ab 120 €/Nacht)</option>
-              <option value="dz-gaestehaus">Doppelzimmer Gästehaus (ab 130 €/Nacht)</option>
-              <option value="dz-fachwerkhaus">Doppelzimmer Fachwerkhaus (ab 140 €/Nacht)</option>
+              <option value="dz-klein">Kleines Doppelzimmer (ab 130 €/Nacht)</option>
+              <option value="dz-gaestehaus">Doppelzimmer Gästehaus (ab 135 €/Nacht)</option>
+              <option value="dz-fachwerkhaus">Doppelzimmer Fachwerkhaus (ab 145 €/Nacht)</option>
             </select>
           </div>
 
@@ -131,7 +135,7 @@
           </button>
 
           <p class="form-note" style="margin-top: var(--s4);">
-            * Pflichtfelder. Ihre Anfrage wird sicher an das Gästehaus übermittelt; wir melden uns per E-Mail bei Ihnen. Es entsteht keine Buchungsverpflichtung — erst mit schriftlicher Bestätigung gilt eine Reservierung als verbindlich.
+            * Pflichtfelder. Ihre Anfrage wird sicher an das Gästehaus übermittelt; wir melden uns per E-Mail bei Ihnen. Es entsteht keine Buchungsverpflichtung, erst mit schriftlicher Bestätigung gilt eine Reservierung als verbindlich.
           </p>
         </form>
       </div>
@@ -149,21 +153,33 @@
               </tr>
               <tr>
                 <td>Kleines Doppelzimmer</td>
-                <td>ab 120 €</td>
-              </tr>
-              <tr>
-                <td>DZ Gästehaus</td>
                 <td>ab 130 €</td>
               </tr>
               <tr>
+                <td>DZ Gästehaus</td>
+                <td>ab 135 €</td>
+              </tr>
+              <tr>
                 <td>DZ Fachwerkhaus</td>
-                <td>ab 140 €</td>
+                <td>ab 145 €</td>
               </tr>
             </tbody>
           </table>
           <p style="font-size: var(--text-xs); color: var(--text-soft); margin-top: var(--s4);">
             Alle Preise sind Endpreise und schließen die gesetzliche MwSt. sowie alle Nebenkosten ein.
           </p>
+        </div>
+
+        <div class="booking-info-card" style="margin-top: var(--s4);">
+          <h3>Gut zu wissen</h3>
+          <ul class="zimmer-inkl__list zimmer-inkl__list--muted" style="margin-top: var(--s3);">
+            <li>Check-in 14–20 Uhr, Check-out bis 10:30 Uhr</li>
+            <li>Mindestaufenthalt 2 Nächte</li>
+            <li>Zahlung vor Ort in bar</li>
+            <li>Kinder ab 10 Jahren, kein Zustellbett</li>
+            <li>Historisches Haus: Zimmer nur über Treppen erreichbar</li>
+            <li>Keine Haustiere</li>
+          </ul>
         </div>
 
         <div class="storno-block" id="stornierung" aria-label="Stornierungsbedingungen">
@@ -210,10 +226,10 @@
     <div class="footer__grid">
       <div>
         <div class="footer__brand">Am <span>Hafen</span></div>
-        <p class="footer__desc">Historisches Gästehaus in der Altstadt von Meersburg am Bodensee. Familie Jakopic/Lehmann heißt Sie willkommen — Saison April bis September.</p>
+        <p class="footer__desc">Historisches Gästehaus in der Altstadt von Meersburg am Bodensee. Familie Jakopic/Lehmann heißt Sie willkommen, Saison April bis September.</p>
       </div>
       <div class="footer__col">
-        <h4>Navigation</h4>
+        <h2>Navigation</h2>
         <ul class="footer__links">
           <li><a href="index.html" class="footer__link">Willkommen</a></li>
           <li><a href="zimmer.html" class="footer__link">Zimmer</a></li>
@@ -222,7 +238,7 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Kontakt</h4>
+        <h2>Kontakt</h2>
         <ul class="footer__links">
           <li><a href="kontakt.html" class="footer__link">Anfahrt</a></li>
           <li><a href="tel:+4975327069" class="footer__link">07532 / 7069</a></li>
@@ -230,7 +246,7 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Rechtliches</h4>
+        <h2>Rechtliches</h2>
         <ul class="footer__links">
           <li><a href="impressum.html" class="footer__link">Impressum</a></li>
           <li><a href="impressum.html#datenschutz" class="footer__link">Datenschutz</a></li>
@@ -239,7 +255,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <span class="footer__copy">© 2025 Gästehaus Am Hafen · Olaf Jakopic · Meersburg am Bodensee</span>
+      <span class="footer__copy">© <span data-year>2026</span> Gästehaus Am Hafen · Olaf Jakopic · Meersburg am Bodensee</span>
       <div class="footer__legal">
         <a href="impressum.html">Impressum</a>
         <a href="impressum.html#datenschutz">Datenschutz</a>
@@ -248,6 +264,6 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

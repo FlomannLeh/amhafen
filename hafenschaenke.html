@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hafenschänke – Gästehaus Am Hafen Meersburg</title>
   <meta name="description" content="Die Hafenschänke im Fachwerkhaus: seit 1956 in Familientradition. Heute in der 4. Generation von Sarah Lehmann mit regionalen Getränken und Cocktails geführt.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
     .hafen-hero {
       padding-top: var(--nav-h);
@@ -97,6 +97,8 @@
     @media (max-width: 900px) {
       .hafen-text-grid { grid-template-columns: 1fr; }
       .hafen-sticky-label { position: static; }
+      .hafen-text-section { padding: var(--s12) 0; }
+      .hafen-gallery { padding: var(--s12) 0; }
       .hafen-gallery__grid { grid-template-columns: 1fr 1fr; }
       .hafen-gallery__item--wide { grid-column: span 2; }
     }
@@ -136,12 +138,12 @@
 <!-- ── Hero ────────────────────────────────────────────────── -->
 <header class="page-header" aria-labelledby="hafen-hero-heading">
   <div class="page-header__bg" role="img" aria-label="Historische Hafenschänke im Fachwerkhaus">
-    <img width="1536" height="2040" src="img-7409.jpg" srcset="img-7409-768.jpg 578w, img-7409-1200.jpg 903w, img-7409.jpg 1204w" sizes="100vw" alt="Theke der Hafenschänke im historischen Fachwerkhaus von 1780" loading="eager" fetchpriority="high">
+    <img width="1536" height="2040" src="images/img-7409.jpg" srcset="images/img-7409-768.jpg 578w, images/img-7409-1200.jpg 903w, images/img-7409.jpg 1204w" sizes="100vw" alt="Theke der Hafenschänke im historischen Fachwerkhaus von 1780" loading="eager" fetchpriority="high">
   </div>
   <div class="page-header__content">
     <p class="eyebrow">Direkt im Haus</p>
     <h1 id="hafen-hero-heading">Die Hafen&shy;schänke</h1>
-    <p class="page-header__sub">Seit 1956 in Familientradition — heute von Sarah Lehmann in der vierten Generation geführt.</p>
+    <p class="page-header__sub">Seit 1956 in Familientradition, heute von Sarah Lehmann in der vierten Generation geführt.</p>
   </div>
 </header>
 
@@ -152,13 +154,14 @@
       <div class="hafen-sticky-label reveal">
         <p class="eyebrow" style="margin-bottom: var(--s4);">Geschichte</p>
         <h2 id="geschichte-heading" style="font-size: var(--text-2xl);">Vier Generationen,<br>eine Leidenschaft</h2>
-        <blockquote class="generation-quote">"Er liebte den Seewein — und wollte ein gutes Viertele anbieten."</blockquote>
+        <blockquote class="generation-quote">"Er liebte den Seewein, und wollte ein gutes Viertele anbieten."</blockquote>
       </div>
       <div class="reveal reveal-delay-1">
-        <p class="lead" style="margin-bottom: var(--s8);">Georg Dreher — Küfermeister, Seewein-Liebhaber und Urgroßvater der heutigen Besitzerin — legte 1956 den Grundstein für die Hafenschänke.</p>
+        <p class="lead" style="margin-bottom: var(--s8);">Georg Dreher, Küfermeister, Seewein-Liebhaber und Urgroßvater der heutigen Besitzerin, legte 1956 den Grundstein für die Hafenschänke.</p>
         <p style="color: var(--text-mid); margin-bottom: var(--s6);">Im Erdgeschoss seines 1780 erbauten Elternhauses richtete er eine schlichte „Stehweinstube" ein. Die Idee war einfach: guten Wein vom See anbieten und selbst genießen. Was als persönliches Projekt begann, wurde zur Seele des Hauses.</p>
-        <p style="color: var(--text-mid); margin-bottom: var(--s6);">Von 1994 bis 2022 führten Doris Lehmann und Olaf Jakopic die Hafenschänke im Rahmen des Restaurant-Gästehauses Am Hafen. Das Erdgeschoss des Fachwerkhauses entwickelte sich zum Treffpunkt für Gäste und Einheimische gleichermaßen.</p>
-        <p style="color: var(--text-mid); margin-bottom: var(--s10);">Seit 2023 liegt die Hafenschänke in den Händen von Sarah Lehmann — Enkelin von Doris Lehmann und damit vierte Generation im Haus. Sie hat den Betrieb neu interpretiert: regionale Getränke aus der Bodenseeregion und handgemischte Cocktails in einem Raum, der seine Geschichte lebt.</p>
+        <p style="color: var(--text-mid); margin-bottom: var(--s6);">In zweiter Generation führten Edelgard und Manfred Becker die Stehweinstube weiter und hielten die Tradition am Leben.</p>
+        <p style="color: var(--text-mid); margin-bottom: var(--s6);">Von 1994 bis 2022 führten Doris Lehmann (geb. Becker) und Olaf Jakopic die Hafenschänke im Rahmen des Restaurant-Gästehauses Am Hafen. Das Erdgeschoss des Fachwerkhauses entwickelte sich zum Treffpunkt für Gäste und Einheimische gleichermaßen.</p>
+        <p style="color: var(--text-mid); margin-bottom: var(--s10);">Seit 2023 liegt die Hafenschänke in den Händen von Sarah Lehmann, Tochter von Doris Lehmann und damit vierte Generation im Haus. Sie hat den Betrieb neu interpretiert: regionale Getränke aus der Bodenseeregion und handgemischte Cocktails in einem Raum, der seine Geschichte lebt.</p>
 
         <!-- Timeline -->
         <div class="hafen-gen-timeline" role="list" aria-label="Generationen-Timeline">
@@ -170,9 +173,15 @@
           </div>
           <div class="gen-item" role="listitem">
             <div class="gen-item__dot" aria-hidden="true"></div>
+            <span class="gen-item__year">1969</span>
+            <div class="gen-item__name">Edelgard &amp; Manfred Becker</div>
+            <div class="gen-item__desc">Fortführung der Stehweinstube · 2. Generation</div>
+          </div>
+          <div class="gen-item" role="listitem">
+            <div class="gen-item__dot" aria-hidden="true"></div>
             <span class="gen-item__year">1994</span>
-            <div class="gen-item__name">Doris Lehmann &amp; Olaf Jakopic</div>
-            <div class="gen-item__desc">Ausbau zum Restaurant-Gästehaus · 2./3. Generation</div>
+            <div class="gen-item__name">Doris Lehmann (geb. Becker) &amp; Olaf Jakopic</div>
+            <div class="gen-item__desc">Ausbau zum Restaurant-Gästehaus · 3. Generation</div>
           </div>
           <div class="gen-item" role="listitem">
             <div class="gen-item__dot" aria-hidden="true" style="background: var(--timber);"></div>
@@ -192,28 +201,24 @@
     <p class="eyebrow reveal" style="margin-bottom: var(--s8); text-align: center;">Impressionen</p>
     <div class="hafen-gallery__grid">
       <div class="hafen-gallery__item hafen-gallery__item--wide reveal"
-           data-lightbox="img-7409.jpg" data-alt="Hafenschänke Theke" role="button" tabindex="0" aria-label="Foto vergrößern">
-        <img width="1536" height="2040" src="img-7409.jpg" srcset="img-7409-768.jpg 578w, img-7409-1200.jpg 903w, img-7409.jpg 1204w" sizes="(max-width: 900px) 100vw, 50vw" alt="Theke der Hafenschänke mit regionalen Getränken" loading="lazy">
+           data-lightbox="images/img-7409.jpg" data-alt="Hafenschänke Theke" role="button" tabindex="0" aria-label="Foto vergrößern">
+        <img width="1536" height="2040" src="images/img-7409.jpg" srcset="images/img-7409-768.jpg 578w, images/img-7409-1200.jpg 903w, images/img-7409.jpg 1204w" sizes="(max-width: 900px) 100vw, 50vw" alt="Theke der Hafenschänke mit regionalen Getränken" loading="lazy">
       </div>
       <div class="hafen-gallery__item reveal reveal-delay-1"
-           data-lightbox="img-7407.jpg" data-alt="Hafenschänke Gastraum" role="button" tabindex="0" aria-label="Foto vergrößern">
-        <img width="1536" height="2040" src="img-7407.jpg" srcset="img-7407-768.jpg 578w, img-7407-1200.jpg 903w, img-7407.jpg 1204w" sizes="(max-width: 900px) 100vw, 50vw" alt="Gemütlicher Gastraum der Hafenschänke mit warmer Holzdecke" loading="lazy">
+           data-lightbox="images/img-7407.jpg" data-alt="Hafenschänke Gastraum" role="button" tabindex="0" aria-label="Foto vergrößern">
+        <img width="1536" height="2040" src="images/img-7407.jpg" srcset="images/img-7407-768.jpg 578w, images/img-7407-1200.jpg 903w, images/img-7407.jpg 1204w" sizes="(max-width: 900px) 100vw, 50vw" alt="Gemütlicher Gastraum der Hafenschänke mit warmer Holzdecke" loading="lazy">
       </div>
       <div class="hafen-gallery__item reveal reveal-delay-1"
-           data-lightbox="img-7408.jpg" data-alt="Hafenschänke Tische" role="button" tabindex="0" aria-label="Foto vergrößern">
-        <img width="1536" height="2040" src="img-7408.jpg" srcset="img-7408-768.jpg 578w, img-7408-1200.jpg 903w, img-7408.jpg 1204w" sizes="(max-width: 900px) 100vw, 50vw" alt="Tische und Sitzplätze in der Hafenschänke" loading="lazy">
+           data-lightbox="images/img-7408.jpg" data-alt="Hafenschänke Tische" role="button" tabindex="0" aria-label="Foto vergrößern">
+        <img width="1536" height="2040" src="images/img-7408.jpg" srcset="images/img-7408-768.jpg 578w, images/img-7408-1200.jpg 903w, images/img-7408.jpg 1204w" sizes="(max-width: 900px) 100vw, 50vw" alt="Tische und Sitzplätze in der Hafenschänke" loading="lazy">
       </div>
       <div class="hafen-gallery__item reveal reveal-delay-2"
-           data-lightbox="img-3006.jpeg" data-alt="Eingang Hafenschänke" role="button" tabindex="0" aria-label="Foto vergrößern">
-        <img width="1800" height="2400" src="img-3006.jpeg" srcset="img-3006-768.jpeg 576w, img-3006-1200.jpeg 900w, img-3006.jpeg 1200w" sizes="(max-width: 900px) 100vw, 50vw" alt="Schild und Eingang der Hafenschänke in der Altstadtgasse" loading="lazy">
-      </div>
-      <div class="hafen-gallery__item reveal reveal-delay-2"
-           data-lightbox="img-0397.jpeg" data-alt="Altstadtgasse Meersburg" role="button" tabindex="0" aria-label="Foto vergrößern">
-        <img width="1800" height="1350" src="img-0397.jpeg" srcset="img-0397-768.jpeg 768w, img-0397-1200.jpeg 1200w, img-0397.jpeg 1800w" sizes="(max-width: 900px) 100vw, 50vw" alt="Malerische Altstadtgasse in Meersburg vor der Hafenschänke" loading="lazy">
+           data-lightbox="images/img-0397.jpeg" data-alt="Altstadtgasse Meersburg" role="button" tabindex="0" aria-label="Foto vergrößern">
+        <img width="1800" height="1350" src="images/img-0397.jpeg" srcset="images/img-0397-768.jpeg 768w, images/img-0397-1200.jpeg 1200w, images/img-0397.jpeg 1800w" sizes="(max-width: 900px) 100vw, 50vw" alt="Malerische Altstadtgasse in Meersburg vor der Hafenschänke" loading="lazy">
       </div>
       <div class="hafen-gallery__item reveal reveal-delay-3"
-           data-lightbox="dsc3263.jpeg" data-alt="Bodensee bei Meersburg" role="button" tabindex="0" aria-label="Foto vergrößern">
-        <img width="1800" height="1200" src="dsc3263.jpeg" srcset="dsc3263-768.jpeg 768w, dsc3263-1200.jpeg 1200w, dsc3263.jpeg 1800w" sizes="(max-width: 900px) 100vw, 50vw" alt="Frühlingsstimmung am Bodensee bei Meersburg" loading="lazy">
+           data-lightbox="images/dsc3263.jpeg" data-alt="Bodensee bei Meersburg" role="button" tabindex="0" aria-label="Foto vergrößern">
+        <img width="1800" height="1200" src="images/dsc3263.jpeg" srcset="images/dsc3263-768.jpeg 768w, images/dsc3263-1200.jpeg 1200w, images/dsc3263.jpeg 1800w" sizes="(max-width: 900px) 100vw, 50vw" alt="Frühlingsstimmung am Bodensee bei Meersburg" loading="lazy">
       </div>
     </div>
   </div>
@@ -224,14 +229,14 @@
   <div class="container">
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--s16); align-items: center;" class="responsive-grid-1col">
       <div class="reveal">
-        <img width="1536" height="2040" src="img-7408.jpg" srcset="img-7408-768.jpg 578w, img-7408-1200.jpg 903w, img-7408.jpg 1204w" sizes="(max-width: 900px) 100vw, 50vw" alt="Hafenschänke heute — regionale Getränke und Cocktails" loading="lazy" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+        <img width="1536" height="2040" src="images/img-7408.jpg" srcset="images/img-7408-768.jpg 578w, images/img-7408-1200.jpg 903w, images/img-7408.jpg 1204w" sizes="(max-width: 900px) 100vw, 50vw" alt="Hafenschänke heute, regionale Getränke und Cocktails" loading="lazy" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
       </div>
       <div class="reveal reveal-delay-1">
         <p class="eyebrow" style="margin-bottom: var(--s4);">Heute</p>
         <h2 id="heute-heading" style="margin-bottom: var(--s6);">Regionale Getränke &amp;<br><em>handgemischte Cocktails</em></h2>
-        <p class="lead" style="margin-bottom: var(--s6);">Sarah Lehmann hat die Hafenschänke neu interpretiert — treu dem Geist des Ortes, aber mit einem frischen Blick auf die Bodenseeregion.</p>
+        <p class="lead" style="margin-bottom: var(--s6);">Sarah Lehmann hat die Hafenschänke neu interpretiert, treu dem Geist des Ortes, aber mit einem frischen Blick auf die Bodenseeregion.</p>
         <p style="color: var(--text-mid); margin-bottom: var(--s4);">Das Angebot konzentriert sich auf regionale Produkte: Weine vom Bodensee, lokale Brauereien und handgemischte Cocktails mit saisonalen Zutaten. Der Raum mit seinen alten Holzbalken und dem Charme von mehr als 250 Jahren ist dabei die beste Kulisse.</p>
-        <p style="color: var(--text-mid);">Die Hafenschänke ist ein Ort für ein Abendgetränk nach einem langen Tag am See — oder für einen Absacker mit netten Menschen, die man gerade erst kennengelernt hat.</p>
+        <p style="color: var(--text-mid);">Die Hafenschänke ist ein Ort für ein Abendgetränk nach einem langen Tag am See, oder für einen Absacker mit netten Menschen, die man gerade erst kennengelernt hat.</p>
       </div>
     </div>
   </div>
@@ -268,10 +273,10 @@
     <div class="footer__grid">
       <div>
         <div class="footer__brand">Am <span>Hafen</span></div>
-        <p class="footer__desc">Historisches Gästehaus in der Altstadt von Meersburg am Bodensee. Familie Jakopic/Lehmann heißt Sie willkommen — Saison April bis September.</p>
+        <p class="footer__desc">Historisches Gästehaus in der Altstadt von Meersburg am Bodensee. Familie Jakopic/Lehmann heißt Sie willkommen, Saison April bis September.</p>
       </div>
       <div class="footer__col">
-        <h4>Navigation</h4>
+        <h2>Navigation</h2>
         <ul class="footer__links">
           <li><a href="index.html" class="footer__link">Willkommen</a></li>
           <li><a href="zimmer.html" class="footer__link">Zimmer</a></li>
@@ -280,7 +285,7 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Kontakt</h4>
+        <h2>Kontakt</h2>
         <ul class="footer__links">
           <li><a href="kontakt.html" class="footer__link">Anfahrt</a></li>
           <li><a href="tel:+4975327069" class="footer__link">07532 / 7069</a></li>
@@ -288,7 +293,7 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Rechtliches</h4>
+        <h2>Rechtliches</h2>
         <ul class="footer__links">
           <li><a href="impressum.html" class="footer__link">Impressum</a></li>
           <li><a href="impressum.html#datenschutz" class="footer__link">Datenschutz</a></li>
@@ -297,7 +302,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <span class="footer__copy">© 2025 Gästehaus Am Hafen · Olaf Jakopic · Meersburg am Bodensee</span>
+      <span class="footer__copy">© <span data-year>2026</span> Gästehaus Am Hafen · Olaf Jakopic · Meersburg am Bodensee</span>
       <div class="footer__legal">
         <a href="impressum.html">Impressum</a>
         <a href="impressum.html#datenschutz">Datenschutz</a>
@@ -308,9 +313,9 @@
 
 <div class="lightbox" role="dialog" aria-modal="true" aria-label="Bildvorschau">
   <button class="lightbox__close" aria-label="Schließen">✕</button>
-  <img class="lightbox__img" alt="">
+  <img class="lightbox__img" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
 </div>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
