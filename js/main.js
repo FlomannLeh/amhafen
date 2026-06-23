@@ -22,6 +22,21 @@ document.querySelectorAll('[data-year]').forEach(el => {
   el.textContent = new Date().getFullYear();
 });
 
+// ── Zeichenzähler für Textfelder mit Limit ────────────────────
+document.querySelectorAll('textarea[maxlength]').forEach((ta) => {
+  const max = ta.getAttribute('maxlength');
+  const counter = document.createElement('div');
+  counter.className = 'char-count';
+  const update = () => {
+    const left = max - ta.value.length;
+    counter.textContent = `${ta.value.length} / ${max} Zeichen`;
+    counter.classList.toggle('char-count--limit', left <= 0);
+  };
+  ta.insertAdjacentElement('afterend', counter);
+  ta.addEventListener('input', update);
+  update();
+});
+
 // ── Mobile Menu ───────────────────────────────────────────────
 const hamburger = document.querySelector('.nav__hamburger');
 const mobileNav = document.querySelector('.nav__mobile');
