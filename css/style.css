@@ -27,6 +27,7 @@
   --lake-pale:      oklch(82%   0.055 241);
   --lake-wash:      oklch(93%   0.025 241);
   --timber:         oklch(60%   0.100 62);
+  --timber-deep:    oklch(43%   0.095 55);
   --timber-pale:    oklch(91%   0.030 75);
   --border:         oklch(87%   0.022 80);
   --border-mid:     oklch(80%   0.030 80);
@@ -906,6 +907,48 @@ body:has(.nav__mobile.is-open) .nav__hamburger { color: var(--text); }
   object-fit: cover;
 }
 
+/* ── Hafenschänke Teaser ─────────────────────────────────── */
+.hafen-teaser__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s16);
+  align-items: stretch;
+}
+
+.hafen-teaser__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hafen-teaser__text .eyebrow { margin-bottom: var(--s6); }
+.hafen-teaser__text h2 { margin-bottom: var(--s6); }
+
+.hafen-teaser__text .lead {
+  color: var(--text-mid);
+  max-width: 48ch;
+  margin-bottom: var(--s8);
+}
+
+.hafen-teaser__text .btn { align-self: flex-start; }
+
+.hafen-teaser__image {
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+}
+
+.hafen-teaser__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-out-quart);
+}
+
+.hafen-teaser__image:hover img { transform: scale(1.02); }
+
 /* ── Geschichte / 1780 Section ───────────────────────────── */
 .history {
   background: oklch(96% 0.018 241);
@@ -1280,68 +1323,219 @@ footer {
   text-shadow: 0 1px 16px oklch(10% 0.02 70 / 0.7);
 }
 
-/* ── Zimmer Page ──────────────────────────────────────────── */
-.room-full {
+/* ── Zimmer Page: Häuser ──────────────────────────────────── */
+/* Jedes der beiden Häuser bekommt eine eigene Sektion mit Außenfoto,
+   damit sichtbar ist, welche Zimmerkategorie in welchem Haus liegt. */
+.haus {
   padding: var(--s20) 0;
 }
 
-.room-full:nth-child(even) {
+.haus--fachwerk {
+  --haus-accent: var(--timber-deep);
+}
+
+.haus--gaestehaus {
+  --haus-accent: var(--lake);
   background: var(--bg-surface);
 }
 
-.room-full__grid {
+.haus__head {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--s10);
+  align-items: center;
+  border-left: 5px solid var(--haus-accent);
+  padding-left: var(--s8);
+  margin-bottom: var(--s16);
+}
+
+.haus__photo {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--bg-deep);
+  margin: 0;
+}
+
+.haus__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-quart);
+}
+
+.haus__photo:hover img {
+  transform: scale(1.03);
+}
+
+.haus__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s2) var(--s4);
+  background: var(--haus-accent);
+  color: var(--white);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: var(--s4);
+}
+
+.haus__badge svg {
+  flex: none;
+}
+
+.haus__title {
+  margin-bottom: var(--s4);
+}
+
+.haus__text {
+  color: var(--text-mid);
+  max-width: 58ch;
+}
+
+.haus__rooms-in {
+  margin-top: var(--s4);
+  font-size: var(--text-sm);
+  color: var(--text-soft);
+}
+
+.haus__rooms-in strong {
+  color: var(--text-mid);
+  font-weight: 600;
+}
+
+.haus__rooms {
+  display: grid;
+  gap: var(--s12);
+}
+
+.haus__rooms--two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.zimmer {
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: calc(var(--nav-h) + var(--s8));
+}
+
+/* Karten in einer Reihe gleich hoch halten, damit die Album-Buttons auf einer Linie sitzen */
+.zimmer > .zimmer-card {
+  flex: 1;
+}
+
+/* ── Zimmerkarte ──────────────────────────────────────────── */
+.zimmer-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  box-shadow: 0 1px 3px oklch(20% 0.02 70 / 0.07);
+}
+
+.zimmer-card--wide {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--s12);
-  align-items: start;
+  align-items: stretch;
 }
 
-.room-full:nth-child(even) .room-full__grid {
-  direction: rtl;
-}
-
-.room-full:nth-child(even) .room-full__grid > * {
-  direction: ltr;
-}
-
-.room-full__gallery {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: var(--s3);
-}
-
-.room-full__gallery-main {
-  grid-row: 1 / span 2;
-  aspect-ratio: 3/4;
+.zimmer-card__img {
   overflow: hidden;
-  min-height: 0;
+  aspect-ratio: 4 / 3;
 }
 
-.room-full__gallery-thumb {
-  overflow: hidden;
-  min-height: 0;
+.zimmer-card--wide .zimmer-card__img {
+  aspect-ratio: auto;
+  min-height: 420px;
 }
 
-.room-full__gallery img {
+.zimmer-card__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s var(--ease-out-quart);
 }
 
-.room-full__gallery img:hover {
+.zimmer-card__img:hover img {
   transform: scale(1.03);
 }
 
-/* Einzelbild-Variante: nur ein repräsentatives Foto, Rest im Album */
-.room-full__gallery--single {
-  display: block;
+.zimmer-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--s10) var(--s8);
 }
 
-.room-full__gallery--single .room-full__gallery-main {
-  grid-row: auto;
-  aspect-ratio: 4 / 3;
+.zimmer-card__body h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: var(--s2);
+}
+
+.zimmer-card__body .lead {
+  margin-bottom: var(--s4);
+}
+
+.zimmer-card__body p {
+  color: var(--text-mid);
+}
+
+.zimmer-card__foot {
+  margin-top: auto;
+}
+
+/* ── Bettgröße mit Vergleichsbalken ───────────────────────── */
+.bed-note {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  padding: var(--s4);
+  margin: var(--s6) 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.bed-note svg {
+  flex: none;
+  color: var(--haus-accent);
+}
+
+.bed-note__size {
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.bed-note__scale {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  margin-top: var(--s2);
+}
+
+.bed-note__bar {
+  flex: 1;
+  max-width: 180px;
+  height: 6px;
+  border-radius: 4px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.bed-note__fill {
+  height: 100%;
+  background: var(--haus-accent);
+}
+
+.bed-note__label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
 }
 
 /* ── Fotoalbum pro Zimmer ─────────────────────────────────── */
@@ -1420,27 +1614,6 @@ footer {
   background: oklch(94% 0.04 25);
   color: oklch(40% 0.13 25);
   border: 1px solid oklch(80% 0.08 25);
-}
-
-.room-full__info {
-  padding: var(--s4) 0;
-}
-
-.room-full__info .eyebrow {
-  margin-bottom: var(--s4);
-}
-
-.room-full__info h2 {
-  margin-bottom: var(--s4);
-}
-
-.room-full__info .lead {
-  margin-bottom: var(--s8);
-}
-
-.room-full__info p {
-  color: var(--text-mid);
-  margin-bottom: var(--s4);
 }
 
 .amenities {
@@ -1988,8 +2161,14 @@ footer {
   .location__grid,
   .booking-grid,
   .contact-page__grid,
-  .hafenbar__grid {
+  .hafenbar__grid,
+  .hafen-teaser__grid {
     grid-template-columns: 1fr;
+  }
+
+  .hafen-teaser__image {
+    aspect-ratio: 4/3;
+    min-height: 0;
   }
 
   .intro__badge {
@@ -2004,12 +2183,26 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .room-full__grid {
+  .haus__head {
+    grid-template-columns: 1fr;
+    gap: var(--s6);
+    padding-left: var(--s6);
+    margin-bottom: var(--s12);
+  }
+
+  .haus__photo {
+    aspect-ratio: 4 / 3;
+    max-width: 420px;
+  }
+
+  .haus__rooms--two,
+  .zimmer-card--wide {
     grid-template-columns: 1fr;
   }
 
-  .room-full:nth-child(even) .room-full__grid {
-    direction: ltr;
+  .zimmer-card--wide .zimmer-card__img {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
   }
 
   .footer__grid {
@@ -2031,16 +2224,9 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .room-full__gallery {
-    grid-template-columns: 1fr;
+  .zimmer-card__body {
+    padding: var(--s8) var(--s6);
   }
-
-  .room-full__gallery-main {
-    grid-row: span 1;
-    aspect-ratio: 4/3;
-  }
-
-  .room-full__gallery-thumb { display: none; }
 
   .footer__grid {
     grid-template-columns: 1fr;
@@ -2110,9 +2296,9 @@ footer {
     padding-top: var(--s12);
     padding-bottom: var(--s12);
   }
-  .room-full {
-    padding-top: var(--s10);
-    padding-bottom: var(--s10);
+  .haus {
+    padding-top: var(--s12);
+    padding-bottom: var(--s12);
   }
 }
 

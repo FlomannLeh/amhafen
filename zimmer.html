@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zimmer – Gästehaus Am Hafen Meersburg</title>
-  <meta name="description" content="Drei Doppelzimmer-Kategorien im Gästehaus Am Hafen: Deluxe, Standard und Kleines Doppelzimmer in der Altstadt von Meersburg.">
+  <meta name="description" content="Drei Doppelzimmer-Kategorien im Gästehaus Am Hafen: Deluxe im Fachwerkhaus, Standard und Kleines Doppelzimmer im Gästehaus gegenüber, in der Altstadt von Meersburg.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -82,158 +82,223 @@
   </div>
 </section>
 
-<!-- ── Zimmer 1: EZ / Kleines DZ ──────────────────────────── -->
-<section class="room-full" id="deluxe" aria-labelledby="room1-heading">
+<!-- ── Haus 1: Fachwerkhaus (Deluxe) ──────────────────────── -->
+<section class="haus haus--fachwerk" aria-labelledby="haus1-heading">
   <div class="container">
-    <div class="room-full__grid">
-      <div class="room-full__gallery room-full__gallery--single reveal">
-        <div class="room-full__gallery-main" data-gallery="deluxe" data-src="images/deluxe-03.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" tabindex="0" role="button" aria-label="Fotoalbum öffnen">
-          <img width="1600" height="1200" src="images/deluxe-03.jpg" srcset="images/deluxe-03-768.jpg 768w, images/deluxe-03-1200.jpg 1200w, images/deluxe-03.jpg 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Deluxe Doppelzimmer im Fachwerkhaus mit original Holzbalken" loading="lazy">
-        </div>
+    <div class="haus__head reveal">
+      <figure class="haus__photo" data-lightbox="images/haus-fachwerk-aussen.jpg" data-alt="Das denkmalgeschützte Fachwerkhaus in der Spitalgasse 4">
+        <img width="1172" height="1600" src="images/haus-fachwerk-aussen.jpg" srcset="images/haus-fachwerk-aussen-768.jpg 563w, images/haus-fachwerk-aussen-1200.jpg 879w, images/haus-fachwerk-aussen.jpg 1172w" sizes="(max-width: 900px) 100vw, 300px" alt="Außenansicht des Fachwerkhauses Am Hafen, Spitalgasse 4 in Meersburg" loading="lazy">
+      </figure>
+      <div>
+        <p class="haus__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 4l9 6.5"></path><path d="M5 9.5V20h14V9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+          Haus 1 · Spitalgasse 4
+        </p>
+        <h2 id="haus1-heading" class="haus__title">Fachwerkhaus</h2>
+        <p class="haus__text">Das denkmalgeschützte Fachwerkhaus von 1780, mit original Holzbalken und Blick zum See. Im Erdgeschoss liegt die Hafenschänke, in den Stockwerken darüber ausschließlich unsere Deluxe-Doppelzimmer.</p>
+        <p class="haus__rooms-in">In diesem Haus: <strong>Deluxe Doppelzimmer</strong></p>
       </div>
-      <div class="room-full__info reveal reveal-delay-1">
-        <p class="eyebrow">Kategorie</p>
-        <h2 id="room1-heading">Deluxe<br>Doppelzimmer</h2>
-        <p class="lead">Ca. 20 m² mit Seeblick, original Holzbalken und Zimmersafe, die schönsten Zimmer im Haus.</p>
-        <p>Mit ca. 20 m² bieten die Deluxe-Doppelzimmer Raum, Charakter und den besten Blick. Sichtbare Holzbalken erinnern an die Geschichte des Fachwerkhauses, während Seeblick und Zimmersafe für modernen Komfort sorgen.</p>
+    </div>
 
-        <div class="amenities" aria-label="Ausstattung">
-          <div class="amenity">Seeblick</div>
-          <div class="amenity">Original Holzbalken</div>
-          <div class="amenity">Zimmersafe</div>
-          <div class="amenity">Dusche &amp; WC</div>
-          <div class="amenity">Pflegeprodukte</div>
-          <div class="amenity">Haarföhn &amp; Handtücher</div>
-          <div class="amenity">TV &amp; kostenloses WLAN</div>
-          <div class="amenity">Ventilator</div>
-        </div>
+    <div class="haus__rooms">
+      <article class="zimmer" id="deluxe" aria-labelledby="room1-heading">
+        <div class="zimmer-card zimmer-card--wide reveal">
+          <div class="zimmer-card__img" data-gallery="deluxe" data-src="images/deluxe-03.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" tabindex="0" role="button" aria-label="Fotoalbum öffnen">
+            <img width="1600" height="1200" src="images/deluxe-03.jpg" srcset="images/deluxe-03-768.jpg 768w, images/deluxe-03-1200.jpg 1200w, images/deluxe-03.jpg 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Deluxe Doppelzimmer im Fachwerkhaus mit original Holzbalken" loading="lazy">
+          </div>
+          <div class="zimmer-card__body">
+            <h3 id="room1-heading">Deluxe Doppelzimmer</h3>
+            <p class="lead">Ca. 20 m² mit Seeblick, original Holzbalken und Zimmersafe, die schönsten Zimmer im Haus.</p>
+            <p>Mit ca. 20 m² bieten die Deluxe-Doppelzimmer Raum, Charakter und den besten Blick. Sichtbare Holzbalken erinnern an die Geschichte des Fachwerkhauses, während Seeblick und Zimmersafe für modernen Komfort sorgen.</p>
 
-        <div class="price-box" role="group" aria-label="Preis">
-          <div>
-            <div class="price-box__amount">ab 145 €</div>
-            <div class="price-box__from">pro Nacht · max. 2 Personen</div>
+            <div class="bed-note">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9v10"></path><path d="M22 19v-6a2 2 0 0 0-2-2H4"></path><path d="M2 14h20"></path><path d="M6 11V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3"></path></svg>
+              <div>
+                <div class="bed-note__size">Doppelbett · 160 bis 180 × 200 cm</div>
+                <div class="bed-note__scale">
+                  <div class="bed-note__bar"><div class="bed-note__fill" style="width: 100%;"></div></div>
+                  <span class="bed-note__label">Größtes Bett</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="amenities" aria-label="Ausstattung">
+              <div class="amenity">Seeblick</div>
+              <div class="amenity">Original Holzbalken</div>
+              <div class="amenity">Zimmersafe</div>
+              <div class="amenity">Dusche &amp; WC</div>
+              <div class="amenity">Pflegeprodukte</div>
+              <div class="amenity">Haarföhn &amp; Handtücher</div>
+              <div class="amenity">TV &amp; kostenloses WLAN</div>
+              <div class="amenity">Ventilator</div>
+            </div>
+
+            <div class="zimmer-card__foot">
+              <div class="price-box" role="group" aria-label="Preis">
+                <div>
+                  <div class="price-box__amount">ab 145 €</div>
+                  <div class="price-box__from">pro Nacht · max. 2 Personen</div>
+                </div>
+              </div>
+              <p style="font-size: var(--text-sm); color: var(--text-soft); margin-bottom: var(--s6);">Alle Preise sind Endpreise inkl. MwSt. und Nebenkosten.</p>
+              <a href="buchen.html?zimmer=deluxe" class="btn btn--primary btn--lg">Dieses Zimmer anfragen</a>
+            </div>
           </div>
         </div>
 
-        <p style="font-size: var(--text-sm); color: var(--text-soft); margin-bottom: var(--s8);">Alle Preise sind Endpreise inkl. MwSt. und Nebenkosten.</p>
-        <a href="buchen.html?zimmer=deluxe" class="btn btn--primary btn--lg">Dieses Zimmer anfragen</a>
-      </div>
-    </div>
-    <div class="room-album reveal">
-      <button class="room-album__toggle" type="button" aria-expanded="false" aria-controls="album-deluxe">
-        <span>Fotoalbum ansehen</span><span class="room-album__count">10 Fotos</span>
-      </button>
-      <div class="room-album__grid" id="album-deluxe" hidden>
-        <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-01.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/deluxe-01-768.jpg" alt="Deluxe Doppelzimmer, Zimmeransicht" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-02.jpg" data-alt="Deluxe Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/deluxe-02-768.jpg" alt="Deluxe Doppelzimmer, Badezimmer" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-03.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/deluxe-03-768.jpg" alt="Deluxe Doppelzimmer, Zimmeransicht" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-04.jpg" data-alt="Deluxe Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/deluxe-04-768.jpg" alt="Deluxe Doppelzimmer, Badezimmer" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-05.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/deluxe-05-768.jpg" alt="Deluxe Doppelzimmer, Zimmeransicht" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-06.jpg" data-alt="Deluxe Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/deluxe-06-768.jpg" alt="Deluxe Doppelzimmer, Badezimmer" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-07.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/deluxe-07-768.jpg" alt="Deluxe Doppelzimmer, Zimmeransicht" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-08.jpg" data-alt="Deluxe Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/deluxe-08-768.jpg" alt="Deluxe Doppelzimmer, Badezimmer" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-09.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/deluxe-09-768.jpg" alt="Deluxe Doppelzimmer, Zimmeransicht" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-10.jpg" data-alt="Deluxe Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/deluxe-10-768.jpg" alt="Deluxe Doppelzimmer, Badezimmer" loading="lazy"></button>
-      </div>
+        <div class="room-album reveal">
+          <button class="room-album__toggle" type="button" aria-expanded="false" aria-controls="album-deluxe">
+            <span>Fotoalbum ansehen</span><span class="room-album__count">10 Fotos</span>
+          </button>
+          <div class="room-album__grid" id="album-deluxe" hidden>
+            <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-01.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/deluxe-01-768.jpg" alt="Deluxe Doppelzimmer, Zimmeransicht" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-02.jpg" data-alt="Deluxe Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/deluxe-02-768.jpg" alt="Deluxe Doppelzimmer, Badezimmer" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-03.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/deluxe-03-768.jpg" alt="Deluxe Doppelzimmer, Zimmeransicht" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-04.jpg" data-alt="Deluxe Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/deluxe-04-768.jpg" alt="Deluxe Doppelzimmer, Badezimmer" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-05.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/deluxe-05-768.jpg" alt="Deluxe Doppelzimmer, Zimmeransicht" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-06.jpg" data-alt="Deluxe Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/deluxe-06-768.jpg" alt="Deluxe Doppelzimmer, Badezimmer" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-07.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/deluxe-07-768.jpg" alt="Deluxe Doppelzimmer, Zimmeransicht" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-08.jpg" data-alt="Deluxe Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/deluxe-08-768.jpg" alt="Deluxe Doppelzimmer, Badezimmer" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-09.jpg" data-alt="Deluxe Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/deluxe-09-768.jpg" alt="Deluxe Doppelzimmer, Zimmeransicht" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="deluxe" data-src="images/deluxe-10.jpg" data-alt="Deluxe Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/deluxe-10-768.jpg" alt="Deluxe Doppelzimmer, Badezimmer" loading="lazy"></button>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ── Zimmer 2: Standard Doppelzimmer ────────────────────── -->
-<section class="room-full" id="standard" aria-labelledby="room2-heading">
+<!-- ── Haus 2: Gästehaus (Standard + Kleines) ─────────────── -->
+<section class="haus haus--gaestehaus" aria-labelledby="haus2-heading">
   <div class="container">
-    <div class="room-full__grid">
-      <div class="room-full__gallery room-full__gallery--single reveal">
-        <div class="room-full__gallery-main" data-gallery="standard" data-src="images/standard-04.jpg" data-alt="Standard Doppelzimmer, Zimmeransicht" tabindex="0" role="button" aria-label="Fotoalbum öffnen">
-          <img width="1600" height="1230" src="images/standard-04.jpg" srcset="images/standard-04-768.jpg 768w, images/standard-04-1200.jpg 1200w, images/standard-04.jpg 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Standard Doppelzimmer mit Doppelbett und Aussicht" loading="lazy">
-        </div>
+    <div class="haus__head reveal">
+      <figure class="haus__photo" data-lightbox="images/haus-gaestehaus.jpg" data-alt="Eingang des Gästehauses Am Hafen in der Spitalgasse 3">
+        <img width="1017" height="1600" src="images/haus-gaestehaus.jpg" srcset="images/haus-gaestehaus-768.jpg 488w, images/haus-gaestehaus-1200.jpg 762w, images/haus-gaestehaus.jpg 1017w" sizes="(max-width: 900px) 100vw, 300px" alt="Eingang des Gästehauses Am Hafen mit Schild, Spitalgasse 3 in Meersburg" loading="lazy">
+      </figure>
+      <div>
+        <p class="haus__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="17"></rect><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M3 20h18"></path></svg>
+          Haus 2 · Spitalgasse 3
+        </p>
+        <h2 id="haus2-heading" class="haus__title">Gästehaus</h2>
+        <p class="haus__text">Direkt gegenüber, ein paar Schritte über die Gasse. Hier liegen das Standard-Doppelzimmer mit seitlicher Seesicht und das Kleine Doppelzimmer mit Blick in den ruhigen Innenhof. Der Eingang liegt hinter der weißen Tür mit dem Schild „Gästehaus Am Hafen".</p>
+        <p class="haus__rooms-in">In diesem Haus: <strong>Standard Doppelzimmer</strong> und <strong>Kleines Doppelzimmer</strong></p>
       </div>
-      <div class="room-full__info reveal reveal-delay-1">
-        <p class="eyebrow">Kategorie</p>
-        <h2 id="room2-heading">Standard<br>Doppelzimmer</h2>
-        <p class="lead">Ca. 18 m² mit komfortablem Doppelbett und schöner Aussicht, der ausgewogene Klassiker.</p>
-        <p>Mit ca. 18 m² bietet das Standard-Doppelzimmer alles, was es für einen erholsamen Aufenthalt braucht: ein bequemes Doppelbett, eine schöne Aussicht und die ruhige Atmosphäre der Spitalgasse direkt vor der Tür.</p>
+    </div>
 
-        <div class="amenities" aria-label="Ausstattung">
-          <div class="amenity">Doppelbett</div>
-          <div class="amenity">Schöne Aussicht</div>
-          <div class="amenity">Dusche &amp; WC</div>
-          <div class="amenity">Haarföhn &amp; Handtücher</div>
-          <div class="amenity">TV &amp; kostenloses WLAN</div>
-          <div class="amenity">Ventilator</div>
-        </div>
+    <div class="haus__rooms haus__rooms--two">
+      <article class="zimmer" id="standard" aria-labelledby="room2-heading">
+        <div class="zimmer-card reveal">
+          <div class="zimmer-card__img" data-gallery="standard" data-src="images/standard-04.jpg" data-alt="Standard Doppelzimmer, Zimmeransicht" tabindex="0" role="button" aria-label="Fotoalbum öffnen">
+            <img width="1600" height="1230" src="images/standard-04.jpg" srcset="images/standard-04-768.jpg 768w, images/standard-04-1200.jpg 1200w, images/standard-04.jpg 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Standard Doppelzimmer mit Doppelbett und Aussicht" loading="lazy">
+          </div>
+          <div class="zimmer-card__body">
+            <h3 id="room2-heading">Standard Doppelzimmer</h3>
+            <p class="lead">Ca. 18 m² mit komfortablem Doppelbett und schöner Aussicht, der ausgewogene Klassiker.</p>
+            <p>Mit ca. 18 m² bietet das Standard-Doppelzimmer alles, was es für einen erholsamen Aufenthalt braucht: ein bequemes Doppelbett, eine schöne Aussicht und die ruhige Atmosphäre der Spitalgasse direkt vor der Tür.</p>
 
-        <div class="price-box" role="group" aria-label="Preis">
-          <div>
-            <div class="price-box__amount">ab 135 €</div>
-            <div class="price-box__from">pro Nacht · max. 2 Personen</div>
+            <div class="bed-note">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9v10"></path><path d="M22 19v-6a2 2 0 0 0-2-2H4"></path><path d="M2 14h20"></path><path d="M6 11V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3"></path></svg>
+              <div>
+                <div class="bed-note__size">Doppelbett · 160 × 200 cm</div>
+                <div class="bed-note__scale">
+                  <div class="bed-note__bar"><div class="bed-note__fill" style="width: 89%;"></div></div>
+                  <span class="bed-note__label">Mittelgroß</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="amenities" aria-label="Ausstattung">
+              <div class="amenity">Seitliche Seesicht</div>
+              <div class="amenity">Ca. 18 m²</div>
+              <div class="amenity">Dusche &amp; WC</div>
+              <div class="amenity">Haarföhn &amp; Handtücher</div>
+              <div class="amenity">TV &amp; kostenloses WLAN</div>
+              <div class="amenity">Ventilator</div>
+            </div>
+
+            <div class="zimmer-card__foot">
+              <div class="price-box" role="group" aria-label="Preis">
+                <div>
+                  <div class="price-box__amount">ab 135 €</div>
+                  <div class="price-box__from">pro Nacht · max. 2 Personen</div>
+                </div>
+              </div>
+              <p style="font-size: var(--text-sm); color: var(--text-soft); margin-bottom: var(--s6);">Alle Preise sind Endpreise inkl. MwSt. und Nebenkosten.</p>
+              <a href="buchen.html?zimmer=standard" class="btn btn--primary btn--lg">Dieses Zimmer anfragen</a>
+            </div>
           </div>
         </div>
 
-        <p style="font-size: var(--text-sm); color: var(--text-soft); margin-bottom: var(--s8);">Alle Preise sind Endpreise inkl. MwSt. und Nebenkosten.</p>
-        <a href="buchen.html?zimmer=standard" class="btn btn--primary btn--lg">Dieses Zimmer anfragen</a>
-      </div>
-    </div>
-    <div class="room-album reveal">
-      <button class="room-album__toggle" type="button" aria-expanded="false" aria-controls="album-standard">
-        <span>Fotoalbum ansehen</span><span class="room-album__count">5 Fotos</span>
-      </button>
-      <div class="room-album__grid" id="album-standard" hidden>
-        <button class="room-album__item" type="button" data-gallery="standard" data-src="images/standard-01.jpg" data-alt="Standard Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/standard-01-768.jpg" alt="Standard Doppelzimmer, Zimmeransicht" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="standard" data-src="images/standard-02.jpg" data-alt="Standard Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/standard-02-768.jpg" alt="Standard Doppelzimmer, Badezimmer" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="standard" data-src="images/standard-03.jpg" data-alt="Standard Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/standard-03-768.jpg" alt="Standard Doppelzimmer, Badezimmer" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="standard" data-src="images/standard-04.jpg" data-alt="Standard Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/standard-04-768.jpg" alt="Standard Doppelzimmer, Zimmeransicht" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="standard" data-src="images/standard-05.jpg" data-alt="Standard Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/standard-05-768.jpg" alt="Standard Doppelzimmer, Badezimmer" loading="lazy"></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Zimmer 3: Kleines Doppelzimmer ─────────────────────── -->
-<section class="room-full" id="klein" aria-labelledby="room3-heading">
-  <div class="container">
-    <div class="room-full__grid">
-      <div class="room-full__gallery room-full__gallery--single reveal">
-        <div class="room-full__gallery-main" data-gallery="klein" data-src="images/klein-01.jpg" data-alt="Kleines Doppelzimmer, Zimmeransicht" tabindex="0" role="button" aria-label="Fotoalbum öffnen">
-          <img width="1600" height="1600" src="images/klein-01.jpg" srcset="images/klein-01-768.jpg 768w, images/klein-01-1200.jpg 1200w, images/klein-01.jpg 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Kleines Doppelzimmer mit Innenhofsicht" loading="lazy">
+        <div class="room-album reveal">
+          <button class="room-album__toggle" type="button" aria-expanded="false" aria-controls="album-standard">
+            <span>Fotoalbum ansehen</span><span class="room-album__count">5 Fotos</span>
+          </button>
+          <div class="room-album__grid" id="album-standard" hidden>
+            <button class="room-album__item" type="button" data-gallery="standard" data-src="images/standard-01.jpg" data-alt="Standard Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/standard-01-768.jpg" alt="Standard Doppelzimmer, Zimmeransicht" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="standard" data-src="images/standard-02.jpg" data-alt="Standard Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/standard-02-768.jpg" alt="Standard Doppelzimmer, Badezimmer" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="standard" data-src="images/standard-03.jpg" data-alt="Standard Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/standard-03-768.jpg" alt="Standard Doppelzimmer, Badezimmer" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="standard" data-src="images/standard-04.jpg" data-alt="Standard Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/standard-04-768.jpg" alt="Standard Doppelzimmer, Zimmeransicht" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="standard" data-src="images/standard-05.jpg" data-alt="Standard Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/standard-05-768.jpg" alt="Standard Doppelzimmer, Badezimmer" loading="lazy"></button>
+          </div>
         </div>
-      </div>
-      <div class="room-full__info reveal reveal-delay-1">
-        <p class="eyebrow">Kategorie</p>
-        <h2 id="room3-heading">Kleines<br>Doppelzimmer</h2>
-        <p class="lead">Ca. 15 m² mit französischem Doppelbett (140 × 200 cm) und Blick in den ruhigen Innenhof.</p>
-        <p>Das kompakte Zimmer mit ca. 15 m² ist ideal für Reisende, die das Wesentliche schätzen. Das französische Doppelbett (140 × 200 cm) bietet bequemen Schlaf, der Blick auf den Innenhof eine ruhige Atmosphäre fernab der Gassen.</p>
+      </article>
 
-        <div class="amenities" aria-label="Ausstattung">
-          <div class="amenity">Französisches Doppelbett 140 × 200</div>
-          <div class="amenity">Innenhofsicht</div>
-          <div class="amenity">Dusche &amp; WC</div>
-          <div class="amenity">Haarföhn &amp; Handtücher</div>
-          <div class="amenity">TV &amp; kostenloses WLAN</div>
-          <div class="amenity">Ventilator</div>
-        </div>
+      <article class="zimmer" id="klein" aria-labelledby="room3-heading">
+        <div class="zimmer-card reveal reveal-delay-1">
+          <div class="zimmer-card__img" data-gallery="klein" data-src="images/klein-01.jpg" data-alt="Kleines Doppelzimmer, Zimmeransicht" tabindex="0" role="button" aria-label="Fotoalbum öffnen">
+            <img width="1600" height="1600" src="images/klein-01.jpg" srcset="images/klein-01-768.jpg 768w, images/klein-01-1200.jpg 1200w, images/klein-01.jpg 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Kleines Doppelzimmer mit Innenhofsicht" loading="lazy">
+          </div>
+          <div class="zimmer-card__body">
+            <h3 id="room3-heading">Kleines Doppelzimmer</h3>
+            <p class="lead">Ca. 15 m² mit französischem Doppelbett und Blick in den ruhigen Innenhof.</p>
+            <p>Das kompakte Zimmer mit ca. 15 m² ist ideal für Reisende, die das Wesentliche schätzen. Das französische Doppelbett bietet bequemen Schlaf, der Blick auf den Innenhof eine ruhige Atmosphäre fernab der Gassen.</p>
 
-        <div class="price-box" role="group" aria-label="Preis">
-          <div>
-            <div class="price-box__amount">ab 130 €</div>
-            <div class="price-box__from">pro Nacht · max. 2 Personen</div>
+            <div class="bed-note">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9v10"></path><path d="M22 19v-6a2 2 0 0 0-2-2H4"></path><path d="M2 14h20"></path><path d="M6 11V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3"></path></svg>
+              <div>
+                <div class="bed-note__size">Französisches Doppelbett · 140 × 200 cm</div>
+                <div class="bed-note__scale">
+                  <div class="bed-note__bar"><div class="bed-note__fill" style="width: 78%;"></div></div>
+                  <span class="bed-note__label">Kompakt</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="amenities" aria-label="Ausstattung">
+              <div class="amenity">Innenhofsicht</div>
+              <div class="amenity">Ca. 15 m²</div>
+              <div class="amenity">Dusche &amp; WC</div>
+              <div class="amenity">Haarföhn &amp; Handtücher</div>
+              <div class="amenity">TV &amp; kostenloses WLAN</div>
+              <div class="amenity">Ventilator</div>
+            </div>
+
+            <div class="zimmer-card__foot">
+              <div class="price-box" role="group" aria-label="Preis">
+                <div>
+                  <div class="price-box__amount">ab 130 €</div>
+                  <div class="price-box__from">pro Nacht · max. 2 Personen</div>
+                </div>
+              </div>
+              <p style="font-size: var(--text-sm); color: var(--text-soft); margin-bottom: var(--s6);">Alle Preise sind Endpreise inkl. MwSt. und Nebenkosten.</p>
+              <a href="buchen.html?zimmer=klein" class="btn btn--primary btn--lg">Dieses Zimmer anfragen</a>
+            </div>
           </div>
         </div>
 
-        <p style="font-size: var(--text-sm); color: var(--text-soft); margin-bottom: var(--s8);">Alle Preise sind Endpreise inkl. MwSt. und Nebenkosten.</p>
-        <a href="buchen.html?zimmer=klein" class="btn btn--primary btn--lg">Dieses Zimmer anfragen</a>
-      </div>
-    </div>
-    <div class="room-album reveal">
-      <button class="room-album__toggle" type="button" aria-expanded="false" aria-controls="album-klein">
-        <span>Fotoalbum ansehen</span><span class="room-album__count">4 Fotos</span>
-      </button>
-      <div class="room-album__grid" id="album-klein" hidden>
-        <button class="room-album__item" type="button" data-gallery="klein" data-src="images/klein-01.jpg" data-alt="Kleines Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/klein-01-768.jpg" alt="Kleines Doppelzimmer, Zimmeransicht" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="klein" data-src="images/klein-02.jpg" data-alt="Kleines Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/klein-02-768.jpg" alt="Kleines Doppelzimmer, Badezimmer" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="klein" data-src="images/klein-03.jpg" data-alt="Kleines Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/klein-03-768.jpg" alt="Kleines Doppelzimmer, Zimmeransicht" loading="lazy"></button>
-        <button class="room-album__item" type="button" data-gallery="klein" data-src="images/klein-04.jpg" data-alt="Kleines Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/klein-04-768.jpg" alt="Kleines Doppelzimmer, Badezimmer" loading="lazy"></button>
-      </div>
+        <div class="room-album reveal">
+          <button class="room-album__toggle" type="button" aria-expanded="false" aria-controls="album-klein">
+            <span>Fotoalbum ansehen</span><span class="room-album__count">4 Fotos</span>
+          </button>
+          <div class="room-album__grid" id="album-klein" hidden>
+            <button class="room-album__item" type="button" data-gallery="klein" data-src="images/klein-01.jpg" data-alt="Kleines Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/klein-01-768.jpg" alt="Kleines Doppelzimmer, Zimmeransicht" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="klein" data-src="images/klein-02.jpg" data-alt="Kleines Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/klein-02-768.jpg" alt="Kleines Doppelzimmer, Badezimmer" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="klein" data-src="images/klein-03.jpg" data-alt="Kleines Doppelzimmer, Zimmeransicht" aria-label="Foto vergrößern"><img src="images/klein-03-768.jpg" alt="Kleines Doppelzimmer, Zimmeransicht" loading="lazy"></button>
+            <button class="room-album__item" type="button" data-gallery="klein" data-src="images/klein-04.jpg" data-alt="Kleines Doppelzimmer, Badezimmer" aria-label="Foto vergrößern"><img src="images/klein-04-768.jpg" alt="Kleines Doppelzimmer, Badezimmer" loading="lazy"></button>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
