@@ -259,3 +259,24 @@ document.querySelectorAll('form[action*="web3forms.com"]').forEach((form) => {
     }
   });
 });
+
+// ── Buchungsformular: verlinkte Kategorie vorauswählen ────────
+// "Dieses Zimmer anfragen" übergibt ?zimmer=deluxe|standard|klein.
+// Das Auswahlfeld zeigt dann nur die passenden Kategorien
+// (beim Kleinen Doppelzimmer auch das Einzelzimmer, gleiches Zimmer).
+const zimmerParam = new URLSearchParams(window.location.search).get('zimmer');
+const zimmerSelect = document.getElementById('zimmer');
+if (zimmerParam && zimmerSelect) {
+  const optionsByCategory = {
+    deluxe: ['dz-fachwerkhaus'],
+    standard: ['dz-gaestehaus'],
+    klein: ['dz-klein', 'ez']
+  };
+  const allowed = optionsByCategory[zimmerParam];
+  if (allowed) {
+    [...zimmerSelect.options].forEach(opt => {
+      if (opt.value && !allowed.includes(opt.value)) opt.remove();
+    });
+    zimmerSelect.value = allowed[0];
+  }
+}
